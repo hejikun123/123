@@ -705,9 +705,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2146811216}
   - component: {fileID: 2146811215}
-  - component: {fileID: 2146811214}
   - component: {fileID: 2146811217}
   - component: {fileID: 2146811218}
+  - component: {fileID: 2146811219}
   m_Layer: 0
   m_Name: SNAKE
   m_TagString: Untagged
@@ -715,20 +715,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2146811214
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2146811213}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eabace72146a0274ea16762fa621c1d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CTransform: {fileID: 0}
-  RB: {fileID: 0}
 --- !u!212 &2146811215
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -833,3 +819,15 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &2146811219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2146811213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eabace72146a0274ea16762fa621c1d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
