@@ -7,7 +7,7 @@ public class body : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        btransform.position = btransform.Find("SNAKE").position;
+        btransform.position = GameObject.Find("SNAKE").transform.position;
     }
     Transform btransform;
     // Update is called once per frame
