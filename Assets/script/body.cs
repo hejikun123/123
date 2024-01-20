@@ -8,6 +8,8 @@ public class body : MonoBehaviour
     void Start()
     {
         btransform = GameObject.Find("SNAKE").transform;
+        GameObject hhe;
+        hhe = gameObject;
     }
     Transform btransform;
     // Update is called once per frame
