@@ -12,7 +12,7 @@ public class food : MonoBehaviour
     void Start()
     {
         wd = GameObject.Find("WORLD").GetComponent<WPRLD>();
-        CL=GameObject.Find("SNAKE").GetComponent<circle>();
+        CL=GameObject.Find("HeavyBandit").GetComponent<circle>();
         UM = GameObject.Find("Canvas").GetComponent<UIMANAGER>();
     }
     // Update is called once per frame
@@ -22,7 +22,7 @@ public class food : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.name=="SNAKE")
+        if (collision.name== "HeavyBandit")
         Destroy(gameObject);
         UM.F();
     }
