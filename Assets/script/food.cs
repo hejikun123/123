@@ -24,5 +24,6 @@ public class food : MonoBehaviour
     {
         if (collision.name=="SNAKE")
         Destroy(gameObject);
+        UM.F();
     }
 }

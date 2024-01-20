@@ -7,17 +7,18 @@ public class circle : MonoBehaviour
     // Start is called before the first frame update
     Transform CTransform;
     Rigidbody2D RB;
- 
+    Quaternion a;
 
     void Start()
     {
         CTransform = gameObject.transform;
         RB = gameObject.GetComponent<Rigidbody2D>();
-     }
-    const float MAX = 2;
-    const float MIN = -2;
+    }
+    const float MAX = 8;
+    const float MIN = -8;
     void Update()
     {
+       
         if (Input.GetKey(KeyCode.W))
             if (RB.velocity.y<MAX)
         {
@@ -41,5 +42,10 @@ public class circle : MonoBehaviour
             RB.AddForce(new Vector2(1f, 0f));
         }
       
+    }
+    private void FixedUpdate()
+    {
+        float angle = Vector3.SignedAngle(transform.up, RB.velocity,new Vector3(0,0,1f));
+        transform.Rotate(new Vector3(0, 0, 0.1f), angle);
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WPRLD : MonoBehaviour
 {
@@ -14,10 +15,12 @@ public class WPRLD : MonoBehaviour
         food = Resources.Load("FOOD") as GameObject;
         StartCoroutine("IE");
     }
+    Text text;
     IEnumerator IE()
     {
+        text = GameObject.Find("t1").GetComponent<Text>();
       yield return null;
-        for (int i = 0; i < 10; i++) 
+       while(10>int.Parse(text.text))
         {
             x = Random.Range(-11.0f, 11.0f);
             y = Random.Range(-5.0f, 5.0f);
