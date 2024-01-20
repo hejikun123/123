@@ -14,24 +14,32 @@ public class circle : MonoBehaviour
         CTransform = gameObject.transform;
         RB = gameObject.GetComponent<Rigidbody2D>();
      }
+    const float MAX = 2;
+    const float MIN = -2;
     void Update()
     {
-
         if (Input.GetKey(KeyCode.W))
+            if (RB.velocity.y<MAX)
         {
-            RB.MovePosition(CTransform.position + new Vector3(0, 0.2F, 0));
+            RB.AddForce(new Vector2(0f,1f));
         }
         if (Input.GetKey(KeyCode.S))
-        {
-            RB.MovePosition(CTransform.position + new Vector3(0, -0.1F, 0));
-        }
+            if (RB.velocity.y >MIN)
+            {
+            
+                RB.AddForce(new Vector2(0f, -1f));
+            }
+        
         if (Input.GetKey(KeyCode.A))
-        {
-            RB.MovePosition(CTransform.position + new Vector3(-0.1f, 0, 0));
+            if (RB.velocity.x >MIN)
+            {
+            RB.AddForce(new Vector2(-1f, 0f));
         }
         if (Input.GetKey(KeyCode.D))
-        {
-            RB.MovePosition(CTransform.position + new Vector3(0.1f, 0, 0));
+            if (RB.velocity.x < MAX)
+            {
+            RB.AddForce(new Vector2(1f, 0f));
         }
+      
     }
 }

@@ -8,6 +8,7 @@ public class WPRLD : MonoBehaviour
     GameObject food;
     float x;
     float y;
+    public GameObject go;
     void Start()
     {
         food = Resources.Load("FOOD") as GameObject;
@@ -20,8 +21,9 @@ public class WPRLD : MonoBehaviour
         {
             x = Random.Range(-11.0f, 11.0f);
             y = Random.Range(-5.0f, 5.0f);
-            Instantiate(food, new Vector3(x,y),Quaternion.identity);
-            yield return new WaitForSeconds(5.0f);
+            go =Instantiate(food, new Vector3(x,y),Quaternion.identity);
+            Destroy(go,5f);
+            yield return new WaitForSeconds(3.0f);
         }
      
     }

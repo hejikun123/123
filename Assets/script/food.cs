@@ -5,22 +5,24 @@ using UnityEngine;
 public class food : MonoBehaviour
 {
     // Start is called before the first frame update
+
+    WPRLD wd;
+    circle CL;
+    UIMANAGER UM;
     void Start()
     {
-        
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Debug.Log(collision.name);
-        if (collision.name == "SNAKE")
-        {
-            Debug.Log(collision.name);
-            Destroy(gameObject, 0.2f);
-                }
+        wd = GameObject.Find("WORLD").GetComponent<WPRLD>();
+        CL=GameObject.Find("SNAKE").GetComponent<circle>();
+        UM = GameObject.Find("Canvas").GetComponent<UIMANAGER>();
     }
     // Update is called once per frame
     void Update()
     {
         
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.name=="SNAKE")
+        Destroy(gameObject);
     }
 }
