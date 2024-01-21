@@ -13,7 +13,6 @@ public class UIMANAGER : MonoBehaviour
         int[] nums = new int[10];
         for (int i = 0; i < 10; ++i)
         {
-            Debug.Log(nums[i]);
         }
     }
 

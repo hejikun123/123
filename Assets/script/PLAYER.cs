@@ -11,6 +11,7 @@ public class PLAYER : MonoBehaviour
     Text p;
     GameObject es;
     GameObject A;
+    public Transform PTransform;
     void IE()
     {
             
