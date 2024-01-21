@@ -13,7 +13,7 @@ public class food : MonoBehaviour
     {
         wd = GameObject.Find("WORLD").GetComponent<WPRLD>();
         CL=GameObject.Find("HeavyBandit").GetComponent<circle>();
-        UM = GameObject.Find("Canvas").GetComponent<UIMANAGER>();
+        UM = GameObject.Find("Canvas1").GetComponent<UIMANAGER>();
     }
     // Update is called once per frame
     void Update()

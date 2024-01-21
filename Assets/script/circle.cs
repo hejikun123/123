@@ -9,11 +9,13 @@ public class circle : MonoBehaviour
     Rigidbody2D RB;
     Quaternion a;
     Animator MAnimator;
+    PLAYER PY;
     void Start()
     {
         CTransform = gameObject.transform;
         RB = gameObject.GetComponent<Rigidbody2D>();
         MAnimator = GetComponent<Animator>();
+        PY = GetComponent<PLAYER>();
     }
     const float MAX = 8;
     const float MIN = -8;
@@ -54,7 +56,7 @@ public class circle : MonoBehaviour
         {
             RB.velocity = Vector2.zero;
         }
-      if(Input.GetMouseButtonDown(0)) 
+      if(Input.GetMouseButtonDown(0)&&PY.PY1.NES>0) 
         {
             MAnimator.SetTrigger("Attack");
         }
