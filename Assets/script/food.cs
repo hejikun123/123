@@ -9,6 +9,7 @@ public class food : MonoBehaviour
     WPRLD wd;
     circle CL;
     UIMANAGER UM;
+    HP HP;
     void Start()
     {
         wd = GameObject.Find("WORLD").GetComponent<WPRLD>();
@@ -20,10 +21,11 @@ public class food : MonoBehaviour
     {
         
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.name== "HeavyBandit")
         Destroy(gameObject);
         UM.F();
+        HP.Harm();
     }
 }
