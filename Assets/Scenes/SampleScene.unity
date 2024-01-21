@@ -1264,6 +1264,7 @@ GameObject:
   - component: {fileID: 1561896844}
   - component: {fileID: 1561896846}
   - component: {fileID: 1561896845}
+  - component: {fileID: 1561896847}
   m_Layer: 0
   m_Name: HPFILL
   m_TagString: Untagged
@@ -1329,6 +1330,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1561896843}
   m_CullTransparentMesh: 1
+--- !u!114 &1561896847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1561896843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96635246f1e05ec47a265959fbc62c14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hppt: {fileID: 1561896845}
+  health: {fileID: 1982268937}
+  healthmeter: 10
+  hppts: 50
 --- !u!1 &1916251347
 GameObject:
   m_ObjectHideFlags: 0
@@ -1475,3 +1492,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PTransform: {fileID: 0}
+  HPF: {fileID: 0}

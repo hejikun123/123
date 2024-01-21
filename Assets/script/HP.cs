@@ -5,29 +5,29 @@ using UnityEngine.UI;
 
 public class HP : MonoBehaviour
 {
-    PLAYER PLAYER = new PLAYER();
-    food food = new food();
     public Image hppt;
-    int hpm;
-    int hpmax;
+    public PLAYER health;
+    public int healthmeter;
+    public int hppts;
     // Start is called before the first frame update
     void Start()
     {
-
-    }
     // Update is called once per frame
-    void Update()
-    {
-       hpm = PLAYER.PY1.HP;
-        hpmax = 50;
+        
     }
     public void HPPOINT() 
     {
-        hppt.fillAmount = hpm / hpmax;
+        hppt.fillAmount = healthmeter/hppts ;
+        Harm();
+            
     }
     public void Harm()
     {
-        hpm += -5;
+        healthmeter += -1;
         HPPOINT();
+    }
+    private void Update()
+    {
+        hppts = health.PY1.HP;
     }
 }

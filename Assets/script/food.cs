@@ -15,6 +15,7 @@ public class food : MonoBehaviour
         wd = GameObject.Find("WORLD").GetComponent<WPRLD>();
         CL=GameObject.Find("HeavyBandit").GetComponent<circle>();
         UM = GameObject.Find("Canvas1").GetComponent<UIMANAGER>();
+        HP = GameObject.Find("HPFILL").GetComponent<HP>();
     }
     // Update is called once per frame
     void Update()
@@ -23,9 +24,9 @@ public class food : MonoBehaviour
     }
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.name== "HeavyBandit")
+       if (collision.name== "HeavyBandit")
+        HP.Harm();
         Destroy(gameObject);
         UM.F();
-        HP.Harm();
     }
 }
