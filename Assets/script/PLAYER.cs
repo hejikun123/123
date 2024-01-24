@@ -13,6 +13,7 @@ public class PLAYER : MonoBehaviour
     GameObject A;
     public Transform PTransform;
     public Image HPF;
+
     void IE()
     {
             
@@ -36,7 +37,6 @@ public class PLAYER : MonoBehaviour
         A=(GameObject)Resources.Load("ESP");
         es=GameObject.Find("ES");
         p = GameObject.Find("point").GetComponent<Text>();
-        ;
         p.text = PY1.ES.ToString();
         for(int i=0;i<PY1.ES;i++)
         {

@@ -1344,7 +1344,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hppt: {fileID: 1561896845}
   health: {fileID: 1982268937}
-  healthmeter: 10
+  healthmeter: 50
   hppts: 50
 --- !u!1 &1916251347
 GameObject:

@@ -7,7 +7,7 @@ public class CAMERA : MonoBehaviour
     Transform Ctransform;
     PLAYER PLAYER1;
     Transform Ptransform;
-    Vector3 LINE;
+    Vector3 LINE; 
 
     // Start is called before the first frame update
     void Start()
@@ -27,3 +27,4 @@ public class CAMERA : MonoBehaviour
         }
     }
 }
+
