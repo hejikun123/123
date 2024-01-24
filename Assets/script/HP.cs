@@ -23,7 +23,7 @@ public class HP : MonoBehaviour
     }
     public void Harm()
     {
-        healthmeter +=-1.0f;
+        healthmeter +=-25.0f;
         HPPOINT();
     }
     private void Update()
