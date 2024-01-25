@@ -23,7 +23,7 @@ public class CAMERA : MonoBehaviour
     {
         if (Ptransform)
         {
-            Ctransform.position = Ptransform.position + LINE;
+            Ctransform.position = new Vector3(Ptransform.position.x, Ptransform.position.y) + LINE;
         }
     }
 }

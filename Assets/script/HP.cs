@@ -28,6 +28,6 @@ public class HP : MonoBehaviour
     }
     private void Update()
     {
-        hppts = health.PY1.HP;
+        hppts = health.HP;
     }
 }
