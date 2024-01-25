@@ -49,15 +49,7 @@ public class PLAYER : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (ESCONTINNERS.Count!=0&&Input.GetMouseButtonDown(0))
-        {
-            GameObject LAST = ESCONTINNERS[ESCONTINNERS.Count - 1];
-            
-;            ESCONTINNERS.RemoveAt(ESCONTINNERS.Count - 1);
-            Destroy(LAST);
-            H();
-            PY1.NES--;
-        }
+       
         
     }
 public void H()
@@ -74,7 +66,18 @@ public void D()
         num++;
         p.text = num.ToString();
     }
-    
+    public void ESC() 
+    {
+        if (ESCONTINNERS.Count != 0)
+        {
+            GameObject LAST = ESCONTINNERS[ESCONTINNERS.Count - 1];
+
+            ESCONTINNERS.RemoveAt(ESCONTINNERS.Count - 1);
+            Destroy(LAST);
+            H();
+            PY1.NES--;
+        }
+    }
 }
 public class CHARACTER 
 {

@@ -24,6 +24,14 @@ public class circle : MonoBehaviour
     }
     const float MAX = 8;
     const float MIN = -8;
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0) && PY.PY1.NES > 0)
+        {
+            MAnimator.SetTrigger("Attack");
+            PY.ESC();
+        }
+    }
     void FixedUpdate()
     {
         if (!isDead)
@@ -69,10 +77,7 @@ public class circle : MonoBehaviour
         {
             MAnimator.SetInteger("AnimState", 0);
         }
-         if(Input.GetMouseButtonDown(0)&&PY.PY1.NES>0) 
-        {
-            MAnimator.SetTrigger("Attack");
-        }
+        
         }
         if(!(Input.GetKey(KeyCode.W)|| Input.GetKey(KeyCode.A)|| Input.GetKey(KeyCode.S)|| Input.GetKey(KeyCode.D))||isDead)
         {
