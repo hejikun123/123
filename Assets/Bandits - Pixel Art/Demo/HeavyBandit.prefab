@@ -30,7 +30,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4588935210562790}
+  m_Father: {fileID: 7714067989947414600}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &114204724084870448
@@ -79,7 +79,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4588935210562790}
+  - component: {fileID: 7714067989947414600}
   - component: {fileID: 114999745408315450}
   - component: {fileID: 95734438044755836}
   - component: {fileID: 212652212501150786}
@@ -92,7 +92,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4588935210562790
+--- !u!4 &7714067989947414600
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -37,29 +37,29 @@ public class PLAYER : Character
         HP = 50;
         ES = 10;
         NES = 10;
-        A=(GameObject)Resources.Load("ESP");
-        es=GameObject.Find("ES");
+        A = (GameObject)Resources.Load("ESP");
+        es = GameObject.Find("ES");
         p = GameObject.Find("point").GetComponent<Text>();
         p.text = ES.ToString();
-        for(int i=0;i<ES;i++)
+        for (int i = 0; i < ES; i++)
         {
-        GameObject GO=Instantiate(A, es.transform.position+ new Vector3(25f*i,0f,0f),Quaternion.identity, es.transform);
+            GameObject GO = Instantiate(A, es.transform.position + new Vector3(25f * i, 0f, 0f), Quaternion.identity, es.transform);
             ESCONTINNERS.Add(GO);
         }
         InvokeRepeating("IE", 0F, 2F);
-        wp = new Melee();
-        Weap=wp.Create("sword", transform);
-       GameObject rg= (GameObject)Resources.Load("range");
-        rge=Instantiate(rg, transform.position, Quaternion.identity);
-        GetComponent<CircleCollider2D>().radius = wp.range / 2;
+        Weap = Weapon.Create("sword", transform);
+        Weap.AddComponent<Melee>();
+        wp = Weap.GetComponent<Melee>();
+        GameObject rg = (GameObject)Resources.Load("range");
+        rge = Instantiate(rg, transform);
+        rge.transform.position = rge.transform.position+new Vector3(0,(transform.localScale.y)/2,0);
       }
     // Update is called once per frame
     void Update()
     {
-        Weap.transform.position = transform.position;
         Weap.GetComponent<SortingGroup>().sortingOrder = GetComponent<SortingGroup>().sortingOrder+1;
         rge.transform.localScale = new Vector3(wp.range, wp.range);
-        rge.transform.position = transform.position;
+
         
     }
     public void H()
@@ -88,8 +88,5 @@ public class PLAYER : Character
             NES--;
         }
     }
-private void OnTriggerEnter2D(Collider2D collision)
-{
 
-}
 }
