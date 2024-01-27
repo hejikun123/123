@@ -36,6 +36,10 @@ public class circle : MonoBehaviour
             MAnimator.SetTrigger("Attack");
             PY.ESC();
         }
+        if (Input.GetMouseButtonDown(1))
+        {
+            PY.stdash();
+        }
         sg.sortingOrder = Mathf.RoundToInt(-transform.position.y);
     }
     void FixedUpdate()
@@ -78,10 +82,7 @@ public class circle : MonoBehaviour
                 RB.MovePosition(transform.localPosition + new Vector3(0.1f*PY.speed, 0f, 0));
                 
                 }
-            if (Input.GetMouseButton(1))
-            {
-                PY.stdash();
-            }
+           
            
         if (RB.velocity.magnitude > 0.01F)
         {
