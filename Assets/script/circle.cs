@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -40,7 +39,7 @@ public class circle : MonoBehaviour
         {
             PY.stdash();
         }
-        sg.sortingOrder = Mathf.RoundToInt(-transform.position.y);
+        sg.sortingOrder = Mathf.RoundToInt(-transform.position.y*10);
     }
     void FixedUpdate()
     {

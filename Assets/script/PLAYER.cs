@@ -1,4 +1,4 @@
-using System.Collections;
+
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -16,6 +16,7 @@ public class PLAYER : Character
     public Transform PTransform;
     public Image HPF;
     GameObject rge;
+    public Bag bag;
 
     public override void IE()
     {
@@ -41,6 +42,7 @@ public class PLAYER : Character
         es = GameObject.Find("ES");
         p = GameObject.Find("point").GetComponent<Text>();
         p.text = ES.ToString();
+        Bagdata.instance.loaddata();
         for (int i = 0; i < ES; i++)
         {
             GameObject GO = Instantiate(A, es.transform.position + new Vector3(25f * i, 0f, 0f), Quaternion.identity, es.transform);

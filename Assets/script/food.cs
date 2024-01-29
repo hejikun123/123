@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 public class food : MonoBehaviour
@@ -14,7 +13,7 @@ public class food : MonoBehaviour
     {
         wd = GameObject.Find("WORLD").GetComponent<WPRLD>();
         CL=GameObject.Find("HeavyBandit").GetComponent<circle>();
-        UM = GameObject.Find("Canvas1").GetComponent<UIMANAGER>();
+        UM = GameObject.Find("Canvas").GetComponent<UIMANAGER>();
         HP = GameObject.Find("HPFILL").GetComponent<HP>();
     }
     // Update is called once per frame
